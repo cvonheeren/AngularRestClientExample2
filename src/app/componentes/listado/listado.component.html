@@ -1,0 +1,66 @@
+<!-- buscador -->
+<div class="row mt-2 bg-light">
+    <div class="col-4">
+
+        <div class="row">
+            <form class="form col-12">
+                <input #buscador (input)="buscar(buscador.value)" class="form-control" type="search"
+                    placeholder="Busca vivienda por nombre o dirección" aria-label="Search">
+            </form>
+        </div>
+
+
+        <!-- toogle -->
+        <div class="row">
+            <div class="btn-group btn-group-toggle col-12 mt-3" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input (input)="todas()" type="radio" name="options" id="option1" autocomplete="off" checked> Todas
+                </label>
+                <label class="btn btn-secondary">
+                    <input #alquiler (input)="buscarPorTipo(alquiler.value)" type="radio" name="options" id="option2"
+                        autocomplete="off" value="alquiler"> Alquiler
+                </label>
+                <label class="btn btn-secondary">
+                    <input #venta (input)="buscarPorTipo(venta.value)" type="radio" name="options" id="option3"
+                        autocomplete="off" value="venta"> Venta
+                </label>
+            </div>
+        </div>
+
+        <!-- rango de precios -->
+        <div class=row>
+            <span class="col-12">Rango de precio:</span>
+
+            <form class="form col-12">
+                <span>Min</span>
+                <input [(ngModel)]="precioMin" (input)="setPrecio(precioMin)" class="form-control" type="number"
+                    aria-label="Search" name="min">
+            </form>
+            <form class="form col-12">
+                <span>Max</span>
+                <input [(ngModel)]="precioMax" (input)="buscarPorPrecio()" class="form-control" type="number"
+                    aria-label="Search" name="max">
+            </form>
+        </div>
+
+
+        <!-- listado -->
+        <nav class="navbar navbar-light bg-info mt-3">
+            <span class="navbar-brand mb-0 h1">Lista de viviendas</span>
+        </nav>
+        <ng-container *ngFor="let inmueble of inmuebles">
+            <div class="card col-12" >
+                <div class="card-body">
+                    <h5 class="card-title">{{inmueble.nombre}}</h5>
+                    <p class="card-text">{{inmueble.precio}} €</p>
+                    <p class="card-text">{{inmueble.direccion}}</p>
+                    <p class="card-text">{{inmueble.tipo}}</p>
+                    <a [routerLink]="['/listado', inmueble.id]" class="btn btn-primary">Detalle</a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="col-8">
+        <router-outlet></router-outlet>
+    </div>
+</div>

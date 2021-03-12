@@ -1,0 +1,9 @@
+<div *ngIf="inmueble" class="card mb-3">
+    <img src="{{inmueble.imagen}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{inmueble.titulo}}</h5>
+        <p class="card-text">{{inmueble.precio}}</p>
+        <p class="card-text"><small class="text-muted">{{inmueble.direccion}}</small></p>
+        <p class="card-text"><small class="text-muted">{{inmueble.tipo}}</small></p>
+    </div>
+</div>

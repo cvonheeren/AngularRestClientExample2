@@ -1,0 +1,53 @@
+{
+  "inmuebles": [
+    {
+      "id": 1,
+      "nombre": "ático",
+      "direccion": "calle sitio",
+      "imagen": "..\\assets\\imagenes\\architecture-2256489_960_720.webp",
+      "precio": 30000,
+      "tipo": "venta",
+      "habitaciones": 2,
+      "servicios": [
+        "desayuno",
+        "limpieza"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "local",
+      "direccion": "calle lugar",
+      "imagen": "..\\assets\\imagenes\\house-540796_960_720.webp",
+      "precio": 60000,
+      "tipo": "alquiler",
+      "habitaciones": 4,
+      "servicios": [
+        "desayuno",
+        "comida",
+        "cocina"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "el sitio",
+      "direccion": "location",
+      "imagen": "..\\assets\\imagenes\\old-farmhouse-2535919_960_720.webp",
+      "precio": 700000,
+      "tipo": "alquiler",
+      "habitaciones": 4,
+      "servicios": [
+        "cocina"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "sdfgsdf",
+      "direccion": "fdgsf",
+      "imagen": "https://cdn.pixabay.com/photo/2014/03/08/22/32/escalator-283448_960_720.jpg",
+      "precio": 999,
+      "tipo": "venta",
+      "habitaciones": 2,
+      "servicios": []
+    }
+  ]
+}

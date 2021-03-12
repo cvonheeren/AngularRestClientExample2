@@ -1,0 +1,13 @@
+<ul class="list-group">
+    <li class="list-group-item active">Listado ordenado por nombre</li>
+    <li *ngFor="let inmueble of ordenados" class="list-group-item">{{inmueble.nombre}}, {{inmueble.precio}}</li>
+
+</ul>
+
+<nav class="navbar navbar-light bg-info mt-2" aria-label="viviendas">
+    <span class="navbar-brand mb-0 h1">Suma de los precios de las viviendas con más de 3 habitaciones: {{precio3}}</span>
+</nav>
+
+<nav class="navbar navbar-light bg-info mt-2" aria-label="Primera con cocina">
+    <span class="navbar-brand mb-0 h1">Primera vivienda con cocina id: {{primeroCC}}</span>
+</nav>
